@@ -16,6 +16,10 @@ public class WordService implements WordServiceInterface {
     @Autowired
     private WordRepository wordRepository;
 
+    public WordService(WordRepository wordRepository) {
+        this.wordRepository = wordRepository;
+    }
+
     @Override
     public Word getRandomWord() {
         List<Word> allWords = wordRepository.findAll();

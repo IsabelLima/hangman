@@ -10,10 +10,13 @@ import org.springframework.util.ResourceUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +27,7 @@ public class XmlLoader implements ApplicationRunner {
     @Autowired
     private WordRepository wordRepository;
 
-    public List<String> readWordsFromXml(String filePath) {
+    public List<String> readWordsFromXml(String filePath) throws IOException, SAXException, ParserConfigurationException {
         List<String> result = new ArrayList<>();
         try {
             File xmlFile = ResourceUtils.getFile(filePath);
@@ -40,7 +43,7 @@ public class XmlLoader implements ApplicationRunner {
                 result.add(node.getFirstChild().getTextContent());
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            throw  e;
         }
         return  result;
     }
