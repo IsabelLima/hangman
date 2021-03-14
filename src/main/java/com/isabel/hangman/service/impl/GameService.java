@@ -13,6 +13,10 @@ public class GameService implements GameServiceInterface {
     @Autowired
     private GameRepository gameRepository;
 
+    public GameService(GameRepository gameRepository) {
+        this.gameRepository = gameRepository;
+    }
+
     public Game save(Game game) {
         if (game.getWord().getAlreadyGuessedWord() == null) {
             String maskedWord = new String(new char[game.getWord().getWord().length()]).replace("\0", "_");

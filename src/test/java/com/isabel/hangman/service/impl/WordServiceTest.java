@@ -38,4 +38,16 @@ public class WordServiceTest {
         Word randomWord = wordService.getRandomWord();
         assertTrue(randomWord.equals(word) || randomWord.equals(word2));
     }
+
+    @Test
+    void shouldCallRepositoryFindAllWhenGetRandomWord() {
+        Word word = new Word();
+        word.setWord("WORD");
+        List<Word> words = new ArrayList<>();
+        words.add(word);
+        Mockito.when(wordRepository.findAll()).thenReturn(words);
+        WordService wordService = new WordService(wordRepository);
+        Word randomWord = wordService.getRandomWord();
+        Mockito.verify(wordRepository).findAll();
+    }
 }

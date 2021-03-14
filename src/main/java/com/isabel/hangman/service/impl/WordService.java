@@ -4,8 +4,6 @@ import com.isabel.hangman.entity.Word;
 import com.isabel.hangman.repository.WordRepository;
 import com.isabel.hangman.service.interfaces.WordServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.security.SecureRandom;
