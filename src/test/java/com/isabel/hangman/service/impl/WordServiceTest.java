@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +46,7 @@ public class WordServiceTest {
         words.add(word);
         Mockito.when(wordRepository.findAll()).thenReturn(words);
         WordService wordService = new WordService(wordRepository);
-        Word randomWord = wordService.getRandomWord();
+        wordService.getRandomWord();
         Mockito.verify(wordRepository).findAll();
     }
 }

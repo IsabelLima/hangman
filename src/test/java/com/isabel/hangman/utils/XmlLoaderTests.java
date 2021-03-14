@@ -1,11 +1,7 @@
 package com.isabel.hangman.utils;
 
-import com.isabel.hangman.utils.XmlLoader;
 import org.junit.jupiter.api.Test;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

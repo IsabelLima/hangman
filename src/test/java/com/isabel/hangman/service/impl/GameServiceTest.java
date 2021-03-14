@@ -3,14 +3,11 @@ package com.isabel.hangman.service.impl;
 import com.isabel.hangman.entity.Game;
 import com.isabel.hangman.entity.Word;
 import com.isabel.hangman.repository.GameRepository;
-import com.isabel.hangman.repository.WordRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.server.ResponseStatusException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
