@@ -1,0 +1,30 @@
+package com.isabel.hangman.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Game {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
+    private Word word;
+
+    @Column
+    @ElementCollection
+    private List<Character> guesses;
+
+    public void addGuess(char guess) {
+        this.guesses.add(guess);
+    }
+}
