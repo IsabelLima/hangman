@@ -64,11 +64,13 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/game",
+							"raw": "https://hangman-game-isabel.herokuapp.com/game",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"hangman-game-isabel",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"game"
 							]
@@ -83,7 +85,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"game\": {\r\n        \"id\": 1\r\n    },\r\n    \"letter\": \"y\"\r\n}\r\n",
+							"raw": "{\r\n    \"game\": {\r\n        \"id\": 1\r\n    },\r\n    \"letter\": \"v\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -91,11 +93,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/game",
+							"raw": "https://hangman-game-isabel.herokuapp.com/game",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"hangman-game-isabel",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"game"
 							]
