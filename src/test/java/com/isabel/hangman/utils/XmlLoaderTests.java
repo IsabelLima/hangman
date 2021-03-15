@@ -18,7 +18,7 @@ public class XmlLoaderTests {
                 "ENGAGEMENT", "COMMUNITY", "MILESTONE");
         List<String> result = new ArrayList<>();
         try {
-            result = xmlLoader.readWordsFromXml("classpath:hangman.xml");
+            result = xmlLoader.readWordsFromXml("hangman.xml");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -29,7 +29,7 @@ public class XmlLoaderTests {
     void ShouldThrowExceptionWhenExceptionToReadFile() {
         XmlLoader xmlLoader = new XmlLoader();
         assertThrows(Exception.class, () -> {
-            xmlLoader.readWordsFromXml("classpath:teste.xml");
+            xmlLoader.readWordsFromXml("teste.xml");
         });
     }
 }
